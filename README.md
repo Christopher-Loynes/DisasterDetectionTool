@@ -14,7 +14,7 @@ The ‘Preprocessing’ folder contains two scripts:
 
 1) 'Aggregate_Raw_Tweet_Files' - aggregate tweets for individual events downloaded from http://crisisnlp.qcri.org/
 
-2) 'Normalise_Tweets' - text normalisation of all aggregated tweets
+2) 'Normalise_Tweets' - text normalisation of all aggregated raw tweets
 
 
 
