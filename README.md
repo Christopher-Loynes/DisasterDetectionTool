@@ -31,7 +31,7 @@ The ‘Testing’ folder contains 3 scripts:
 
 The ‘Evaluation’ folder contains 1 script:
 
-1) Overall_Evaluation - the best variant of the Naive Bayes (benchmark) and linear Support Vector Classifier (the best performing classifier from 'testing' performed for the MSc thesis) are evaluated on increasingly larger subsets. This is controlled by adjusting the p value in line 17. Unigrams is used, based on the results obtained during the thesis but can be changed by adjusting the 'ngram_range' in line 588. 
+'Overall_Evaluation' - the best variant of the Naive Bayes (benchmark) and linear Support Vector Classifier (the best performing classifier from 'testing' performed for the MSc thesis) are evaluated on increasingly larger subsets. This is controlled by adjusting the p value in line 17. Unigrams is used, based on the results obtained during the thesis but can be changed by adjusting the 'ngram_range' in line 588. 
 
 SMOTE oversampling is performed on the training dataset only, not the test dataset, to prevent artifically creaitng an event, since the volume of tweets in a specified radius is used for DBSCAN clustering. No cross-validation is performed. 
 
