@@ -1,4 +1,4 @@
-An automated disaster detection tool written in Python as part of an MSc thesis. The Python scripts show how 4 text classifiers were tested, during a phase called 'testing'. 2 text classifers with adjusted parameters were then evaluated, alongside a DBSCAN algorithm, during a phase called 'evaluation'. The MSc thesis proposed the use of a linear SVC with a 'cost' parameter of 0.5 and a DBSCAN algorithm with an 'eps' value of 20 (20km) and 'min_samples' value of 80 (80 tweets). This means a disaster is detected if 80 tweets classified by the linear SVC as belonging to the same disaster-type (e.g. typhoon) are clustered inside a radius of 20km, using coordinates appended to tweets.
+An automated disaster detection tool written in Python as part of an MSc thesis. The Python scripts show how 4 text classifiers (Naive Bayes (benchmark), linear Support Vector Classifier, Logistic Regression and Random Forest) were tested, during a phase called 'testing'. 2 text classifers with adjusted parameters were then evaluated, alongside a DBSCAN algorithm, during a phase called 'evaluation'. The MSc thesis proposed the use of a linear SVC with a 'cost' parameter of 0.5 and a DBSCAN algorithm with an 'eps' value of 20 (20km) and 'min_samples' value of 80 (80 tweets). This means a disaster is detected if 80 tweets classified by the linear SVC as belonging to the same disaster-type (e.g. typhoon) are clustered inside a radius of 20km, using coordinates appended to tweets.
 
 
 The ‘Data’ folder contains 2 files:
@@ -19,7 +19,7 @@ The ‘Preprocessing’ folder contains 2 scripts:
 
 The ‘Testing’ folder contains 3 scripts:
 
-1) 'Unigrams' - test a Naive Bayes (benchmark), linear Support Vector Classifier, Logistic Regression and Random Forest text classifier on unigrams using Term Frequency Inverse Document Frequency (TF-IDF), ten-fold cross validation and stratified K-sampling. Different tests can be performed for each classifier, adjusting the values of classifier-specific parameters (lines 607-610). The micro-average Accuracy and AUC values (using ROC curves) are calculated, since the 'Agg_Reduced.csv.zip' dataset contains a class imbalance.
+1) 'Unigrams' - test the 4 text classifiers on unigrams using Term Frequency Inverse Document Frequency (TF-IDF), ten-fold cross validation and stratified K-sampling. Different tests can be performed for each classifier, adjusting the values of classifier-specific parameters (lines 607-610). The micro-average Accuracy and AUC values (using ROC curves) are calculated, since the 'Agg_Reduced.csv.zip' dataset contains a class imbalance.
 
 2) 'Bigrams' - test the same text classifiers via the same techniques but on bigrams. The code is identical, except the 'ngram_range' in line 583, as part of the TfidfVectorizer and the subsequent use of the TF-IDF vector.
 
