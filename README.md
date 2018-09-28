@@ -68,9 +68,9 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a linear SV
   - The code is identical, except the `ngram_range` in line 583, as part of the *TfidfVectorizer* and the subsqeuent use of the *TF-IDF* vector.
 
 
-## The ‘Evaluation’ folder contains 1 script:
+## The 'Evaluation’ folder contains 1 script:
 
-**_ 1) Overall_Evaluation_**:
+**_1) Overall_Evaluation_**:
   - The best variant of the Naive Bayes (benchmark) and linear Support Vector Classifier (the best performing classifier from *testing* performed for the MSc thesis) are evaluated on increasingly larger subsets
     - Controlled by adjusting the `p` value in line 17. Unigrams is used, based on the results obtained during the thesis but can be changed by adjusting the `ngram_range` in line 588. 
 
