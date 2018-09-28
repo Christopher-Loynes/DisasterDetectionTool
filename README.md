@@ -15,9 +15,9 @@ A text classifier is used to classify tweets into disaster-type. These classifie
     - *Micro-average AUC scores (computed using ROC curves)*
     - *Micro-average Accuracy scores*
     
-  - An optimised Naive Bayes classifier and the best-performing classifier (found to the linear SVC) are then selected for **_evaluation_**
+  - An optimised Naive Bayes classifier and the best-performing classifier (found to the linear SVC) are then selected for *evaluation*
   
-**_Evaluation_** 
+## Evaluation 
   - The optimised Naive Bayes classifier and best-performing classifier are assessed further:
     - *SMOTE oversampling*
     - *Macro-average AUC scores*
