@@ -1,35 +1,35 @@
-## An automated disaster detection tool written in Python as part of an MSc thesis.
+# An automated disaster detection tool written in Python as part of an MSc thesis.
 
-A text classifier is used to classify tweets into disaster-type. These classified tweets are then clustered using Density-based spatial clustering of applications with Noise (DBSCAN). To select the most relevant text classifier and parameter settings, 2 stages of assessment are completed:
+A text classifier is used to classify tweets into disaster-type. These classified tweets are then clustered using *Density-Based Spatial Clustering of Applications with Noise (DBSCAN)*. To select the most relevant text classifier and parameter settings, 2 stages of assessment are completed: *testing* and *evaluation*.
 
 ## Testing 
   - 4 text classifiers are tested. In the thesis, this involved 8 different parameter settings, each parameter unique to the classifer
-    - Naive Bayes (benchmark)
-    - Linear Support Vector Classifier (SVC)
-    - Logisitc Regression
-    - Random Forest
+    - *Naive Bayes (benchmark)*
+    - *Linear Support Vector Classifier (SVC)*
+    - *Logisitc Regression*
+    - *Random Forest*
     
   - All classifiers tested using:
-    - Ten-fold cross-validation
-    - Stratified k-fold sampling
-    - Micro-average AUC scores (computed using ROC curves)
-    - Micro-average Accuracy scores
+    - *Ten-fold cross-validation*
+    - *Stratified k-fold sampling*
+    - *Micro-average AUC scores (computed using ROC curves)*
+    - *Micro-average Accuracy scores*
     
   - An optimised Naive Bayes classifier and the best-performing classifier (found to the linear SVC) are then selected for **_evaluation_**
   
 **_Evaluation_** 
   - The optimised Naive Bayes classifier and best-performing classifier are assessed further:
-    - SMOTE oversampling 
-    - Macro-average AUC scores
-    - Macro-average Accuracy scores
-    - Confusion matrices
-    - Review of misclassified tweets
+    - *SMOTE oversampling*
+    - *Macro-average AUC scores*
+    - *Macro-average Accuracy scores*
+    - *Confusion matrices*
+    - *Review of misclassified tweets*
     
-  - DBSCAN algorithm is evaluated using tweets classified by both text classifiers 
+  - *DBSCAN* algorithm is evaluated using tweets classified by both text classifiers 
 
-After 'testing' and 'evaluation', the MSc thesis proposed the use of a linear SVC with a 'cost' parameter of 0.5 and a DBSCAN algorithm with an 'eps' value of 20 (20km) and 'min_samples' value of 80 (80 tweets). This means a disaster is detected if 80 tweets, classified by the linear SVC as belonging to the same disaster-type (e.g. typhoon), are clustered inside a radius of 20km, using coordinates appended to tweets.
+After *testing* and *evaluation*, the MSc thesis proposed the use of a linear SVC with a 'cost' parameter of 0.5 and a DBSCAN algorithm with an 'eps' value of 20 (20km) and 'min_samples' value of 80 (80 tweets). This means a disaster is detected if 80 tweets, classified by the linear SVC as belonging to the same disaster-type (e.g. typhoon), are clustered inside a radius of 20km, using coordinates appended to tweets.
 
-
+# Resources
 
 ## The ‘Data’ folder contains 2 files:
 
