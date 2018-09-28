@@ -10,6 +10,7 @@ A text classifier is used to classify tweets into disaster-type. These classifie
     - *Random Forest*
     
   - All classifiers tested using:
+    - *Term Frequency Inverse Document Frequency (TF-IDF)*
     - *Ten-fold cross-validation*
     - *Stratified k-fold sampling*
     - *Micro-average AUC scores (computed using ROC curves)*
@@ -19,6 +20,7 @@ A text classifier is used to classify tweets into disaster-type. These classifie
   
 ## Evaluation 
   - The optimised Naive Bayes classifier and best-performing classifier are assessed further:
+    - *Term Frequency Inverse Document Frequency (TF-IDF)*
     - *SMOTE oversampling (training data only)*
     - *Macro-average AUC scores*
     - *Macro-average Accuracy scores*
@@ -52,7 +54,7 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a linear SV
 **_1) Unigrams_**:
   - Test the 4 text classifiers on unigrams using:
     - Term Frequency Inverse Document Frequency (TF-IDF)
-    - ten-fold cross validation
+    - Ten-fold cross validation
     - Stratified K-fold Smpling.
   - Different tests can be performed for each classifier, adjusting the values of classifier-specific parameters (lines 607-610)
   - The micro-average Accuracy and AUC values (using ROC curves) are calculated, since the 'Agg_Reduced.csv.zip' dataset contains a class imbalance.
