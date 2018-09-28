@@ -6,7 +6,7 @@ A text classifier is used to classify tweets into disaster-type. These classifie
   - 4 text classifiers are tested. In the thesis, this involved 8 different parameter settings, each parameter unique to the classifer
     - *Naive Bayes (benchmark)*
     - *Linear Support Vector Classifier (SVC)*
-    - *Logisitc Regression*
+    - *Logistic Regression*
     - *Random Forest*
     
   - All classifiers tested using:
