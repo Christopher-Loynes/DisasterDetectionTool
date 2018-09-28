@@ -19,7 +19,7 @@ A text classifier is used to classify tweets into disaster-type. These classifie
   
 ## Evaluation 
   - The optimised Naive Bayes classifier and best-performing classifier are assessed further:
-    - *SMOTE oversampling*
+    - *SMOTE oversampling (training data only)*
     - *Macro-average AUC scores*
     - *Macro-average Accuracy scores*
     - *Confusion matrices*
@@ -49,22 +49,40 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a linear SV
 
 ## The ‘Testing’ folder contains 3 scripts:
 
-**_1) Unigrams_** - test the 4 text classifiers on unigrams using Term Frequency Inverse Document Frequency (TF-IDF), ten-fold cross validation and stratified K-sampling. Different tests can be performed for each classifier, adjusting the values of classifier-specific parameters (lines 607-610). The micro-average Accuracy and AUC values (using ROC curves) are calculated, since the 'Agg_Reduced.csv.zip' dataset contains a class imbalance.
+**_1) Unigrams_**:
+  - Test the 4 text classifiers on unigrams using:
+    - Term Frequency Inverse Document Frequency (TF-IDF)
+    - ten-fold cross validation
+    - Stratified K-fold Smpling.
+  - Different tests can be performed for each classifier, adjusting the values of classifier-specific parameters (lines 607-610)
+  - The micro-average Accuracy and AUC values (using ROC curves) are calculated, since the 'Agg_Reduced.csv.zip' dataset contains a class imbalance.
 
-**_2) Bigrams_** - test the same text classifiers via the same techniques but on bigrams. The code is identical, except the 'ngram_range' in line 583, as part of the TfidfVectorizer and the subsequent use of the TF-IDF vector.
+**_2) Bigrams_**: 
+  - Test the same text classifiers via the same techniques but on bigrams
+  - The code is identical, except the `ngram_range` in line 583, as part of the *TfidfVectorizer* and the subsequent use of the *TF-IDF* vector.
 
-**_3) 'Trigrams_** - test the same text classifiers via the same techniques but on trigrams. The code is identical, except the 'ngram_range' in line 583, as part of the TfidfVectorizer and the subsqeuent use of the TF-IDF vector.
+**_3) 'Trigrams_**:
+  - Test the same text classifiers via the same techniques but on trigrams
+  - The code is identical, except the `ngram_range` in line 583, as part of the *TfidfVectorizer* and the subsqeuent use of the *TF-IDF* vector.
 
 
 ## The ‘Evaluation’ folder contains 1 script:
 
-**_Overall_Evaluation_** - the best variant of the Naive Bayes (benchmark) and linear Support Vector Classifier (the best performing classifier from 'testing' performed for the MSc thesis) are evaluated on increasingly larger subsets. This is controlled by adjusting the `p` value in line 17. Unigrams is used, based on the results obtained during the thesis but can be changed by adjusting the `ngram_range` in line 588. 
+**_Overall_Evaluation_**:
+  - The best variant of the Naive Bayes (benchmark) and linear Support Vector Classifier (the best performing classifier from *testing* performed for the MSc thesis) are evaluated on increasingly larger subsets
+    - Controlled by adjusting the `p` value in line 17. Unigrams is used, based on the results obtained during the thesis but can be changed by adjusting the `ngram_range` in line 588. 
 
-SMOTE oversampling is performed on the training dataset only, not the test dataset, to prevent artifically creating an event, since the volume of tweets in a specified radius is used for DBSCAN clustering. No cross-validation is performed. 
+  - *SMOTE oversampling* is performed on the training dataset only, not the test dataset
+    - Prevent artifically creating an event, since the volume of tweets in a specified radius is used for DBSCAN clustering
+    - No cross-validation is performed. 
 
-Confusion matrices are created, ROC curves and macro-average AUC values are calculated, alongside macro-average Accuracy values (since the SMOTE oversampling removes the class imbalance), and misclassified tweets reviewed. 
+  - Confusion matrices are created
+  - ROC curves, macro-average AUC values are calculated, alongside macro-average Accuracy values (since the SMOTE oversampling removes the class imbalance), and misclassified tweets reviewed. 
 
-DBSCAN clustering is performed on classified tweets from both the Naives Bayes and SVC classifiers. The `epsilon value` (radius) in line 1002 can be adjusted (this value is for both Naive Bayes and SVC) and the `min_density` (number of points in the specified radius) in line 1029 for the SVC and line 1280 for the Naive Bayes, can be adjusted. 
+  - DBSCAN clustering is performed on classified tweets from both the *Naives Bayes* and *SVC* classifiers
+  - `Epsilon value` (radius) in line 1002 can be adjusted (this value is for both *Naive Bayes* and *SVC*)
+  - `Min_density` (number of points in the specified radius) in line 1029 for the SVC and line 1280 for the Naive Bayes, can be adjusted. 
 
-A colour-coded map of the world is generated for each classifier that overlays the location and event-type of each detected disaster, alongside a .csv export, which contains the location, event-type and coordinates of each disaster.
+   - A colour-coded map of the world is generated for each classifier that overlays the location and event-type of each detected disaster
+   - A .csv export is produced, which contains the location, event-type and coordinates of each disaster.
 
