@@ -1,6 +1,6 @@
 An automated disaster detection tool written in Python as part of an MSc thesis. The Python scripts show how 4 text classifiers (Naive Bayes (benchmark), linear Support Vector Classifier, Logistic Regression and Random Forest) were tested, during a phase called 'testing'. 2 text classifers (optimised Naive Bayes benchmark, and the best-performing classifer, linear SVC) with adjusted parameters were then evaluated, alongside a DBSCAN algorithm, during a phase called 'evaluation'. 
 
-After 'testing' and 'evaluation' the MSc thesis proposed the use of a linear SVC with a 'cost' parameter of 0.5 and a DBSCAN algorithm with an 'eps' value of 20 (20km) and 'min_samples' value of 80 (80 tweets). This means a disaster is detected if 80 tweets classified by the linear SVC as belonging to the same disaster-type (e.g. typhoon) are clustered inside a radius of 20km, using coordinates appended to tweets.
+After 'testing' and 'evaluation', the MSc thesis proposed the use of a linear SVC with a 'cost' parameter of 0.5 and a DBSCAN algorithm with an 'eps' value of 20 (20km) and 'min_samples' value of 80 (80 tweets). This means a disaster is detected if 80 tweets, classified by the linear SVC as belonging to the same disaster-type (e.g. typhoon), are clustered inside a radius of 20km, using coordinates appended to tweets.
 
 
 
@@ -33,7 +33,7 @@ The ‘Evaluation’ folder contains 1 script:
 
 'Overall_Evaluation' - the best variant of the Naive Bayes (benchmark) and linear Support Vector Classifier (the best performing classifier from 'testing' performed for the MSc thesis) are evaluated on increasingly larger subsets. This is controlled by adjusting the p value in line 17. Unigrams is used, based on the results obtained during the thesis but can be changed by adjusting the 'ngram_range' in line 588. 
 
-SMOTE oversampling is performed on the training dataset only, not the test dataset, to prevent artifically creaitng an event, since the volume of tweets in a specified radius is used for DBSCAN clustering. No cross-validation is performed. 
+SMOTE oversampling is performed on the training dataset only, not the test dataset, to prevent artifically creating an event, since the volume of tweets in a specified radius is used for DBSCAN clustering. No cross-validation is performed. 
 
 Confusion matrices are created, ROC curves and macro-average AUC values are calculated, alongside macro-average Accuracy values (since the SMOTE oversampling removes the class imbalance), and misclassified tweets reviewed. 
 
