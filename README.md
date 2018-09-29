@@ -60,7 +60,6 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
       - *Unigrams* (found to lead to highest Accuracy and lowest misclassification rates during *testing*)
     - *Ten-fold cross validation*
     - *Stratified K-fold sampling*
-    
   - Different tests can be performed for each classifier, adjusting the values of classifier-specific parameters (lines 607-610)
   - The micro-average Accuracy and AUC values (using ROC curves) are calculated, since the 'Agg_Reduced.csv.zip' dataset contains a class imbalance.
 
@@ -84,12 +83,12 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
     - No cross-validation is performed. 
 
   - Confusion matrices are created
-  - ROC curves, macro-average AUC values are calculated, alongside macro-average Accuracy values (since the SMOTE oversampling removes the class imbalance), and misclassified tweets reviewed. 
+  - ROC curves, macro-average AUC values are calculated, alongside macro-average Accuracy values (since the SMOTE oversampling removes the class imbalance) and misclassified tweets reviewed. 
 
   - DBSCAN clustering is performed on classified tweets from both the *Naives Bayes* and *SVC* classifiers
   - `Epsilon value` (radius) in line 1002 can be adjusted (this value is for both *Naive Bayes* and *SVC*)
-  - `Min_density` (number of points in the specified radius) in line 1029 for the SVC and line 1280 for the Naive Bayes, can be adjusted. 
+  - `Min_density` (number of points in the specified radius) in line 1029 for the *linear SVC* and line 1280 for the *Naive Bayes*, can be adjusted
 
    - A colour-coded map of the world is generated for each classifier that overlays the location and event-type of each detected disaster
-   - A .csv export is produced, which contains the location, event-type and coordinates of each disaster.
+   - A .csv export is produced, which contains the location, event-type and coordinates of each disaster
 
