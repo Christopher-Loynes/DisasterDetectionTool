@@ -5,11 +5,11 @@ A text classifier is used to classify tweets into disaster-type. These classifie
 After pre-processing raw tweets, the most relevant text classifier and parameter values are selected using 2 stages of assessment: *testing* and *evaluation*. Both are explained below.
 
 ## Testing 
-  - 4 text classifiers are tested. In the thesis, this involved 8 different values for each parameter. Each parameter ia unique to the classifer. Below is the name of each classifier tested and the parameter adjusted.
+  - 4 text classifiers are tested. In the thesis, this involved 8 different values for each parameter. Each parameter is unique to the classifier. Below is the name of each classifier tested and the parameter adjusted.
     - *Naive Bayes (benchmark)*: `alpha`
     - *Linear Support Vector Classifier (SVC)*: `cost`
     - *Logistic Regression*: `cost`
-    - *Random Forest*: `number of trees`, `splitting criterion`, `maximum tree depth`
+    - *Random Forest*: `number of trees`, `maximum tree depth`, `splitting criterion`
     
   - All text classifiers tested using:
     - *Term Frequency Inverse Document Frequency (TF-IDF)*
@@ -30,7 +30,7 @@ After pre-processing raw tweets, the most relevant text classifier and parameter
     - *Confusion matrices*
     - *Review of misclassified tweets*
     
-  - *DBSCAN* algorithm is evaluated using tweets classified by both text classifiers 
+  - *DBSCAN* algorithm is evaluated using tweets classified by both text classifiers:
     - Performance is evaluated after adjusting `eps` and `min_samples` parameter values
     -  `eps`: radius (input is KM)
     - `min_samples`: minimum number of tweets in specified radius to detect a disaster
