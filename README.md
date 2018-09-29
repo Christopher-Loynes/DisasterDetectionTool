@@ -21,7 +21,7 @@ After pre-processing raw tweets, the most relevant text classifier and parameter
     
   
 ## Evaluation 
-  - The optimised *Naive Bayes* classifier and best-performing classifier (found to the *linear SVC*) are assessed further:
+  - The optimised *Naive Bayes* classifier and best-performing classifier (found to be the *linear SVC*) are assessed further:
     - *Term Frequency Inverse Document Frequency (TF-IDF)*
     - *SMOTE oversampling*
       - *Training data only*
