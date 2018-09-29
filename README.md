@@ -1,4 +1,4 @@
-# An automated disaster detection tool written in Python as part of an MSc thesis.
+# An automated disaster detection tool written in Python and run on Amazon Web Services (AWS) as part of an MSc thesis.
 
 A text classifier is used to classify tweets into disaster-type. These classified tweets are then clustered using *Density-Based Spatial Clustering of Applications with Noise (DBSCAN)*. A disaster is detected if the number of tweets belonging to a single disaster-type exceeds a threshold within a specified radius. In the thesis, the values proposed are 80 tweets and 20km, respectively.
 
@@ -84,7 +84,7 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
   - *SMOTE oversampling*
     - Performed on the training dataset only, not the test dataset
     - Prevent artifically creating an event, since the volume of tweets in a specified radius is used for DBSCAN clustering
-    - No cross-validation is performed. 
+    - No cross-validation is performed (too computationall expensive) 
 
   - Confusion matrices, ROC curves, macro-average AUC and Accuracy values are calculated (since the *SMOTE oversampling* removes the class imbalance in the *'Agg_Reduced* dataset) and misclassified tweets reviewed 
 
