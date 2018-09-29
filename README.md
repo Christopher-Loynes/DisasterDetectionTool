@@ -33,7 +33,7 @@ After pre-processing raw tweets, the most relevant text classifier and parameter
   - *DBSCAN* algorithm is evaluated using tweets classified by both text classifiers 
     - Performance is evaluated after adjusting `eps` and `min_samples` parameter values
     -  `eps`: radius (input is KM)
-    - `min_samples`: minimum number of tweets in specified radius (`eps`) to detect a disaster
+    - `min_samples`: minimum number of tweets in specified radius to detect a disaster
 
 After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear SVC* with a `cost` parameter of 0.5 and a *DBSCAN* algorithm with an `eps` value of 20 (20km) and `min_samples` value of 80 (80 tweets). This means a disaster is detected if 80 tweets, classified by the *linear SVC* as belonging to the same disaster-type (e.g. typhoon), are clustered inside a radius of 20km, using coordinates appended to tweets.
 
