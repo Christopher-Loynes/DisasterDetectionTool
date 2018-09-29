@@ -39,4 +39,7 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
 
 ## Resources
 
-['Data' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Data'-Folder)
+- [1) 'Data' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Data'-Folder)
+- [2) 'Pre-processing folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Preprocessing'-Folder)
+- [3) 'Testing' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Testing'-Folder)
+- [3) ['Evaluation' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Evaluation'-Folder)
