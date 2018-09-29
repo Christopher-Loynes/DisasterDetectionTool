@@ -11,7 +11,7 @@ To select the most relevant text classifier and parameter values, 2 stages of as
     - *Logistic Regression*: `cost`
     - *Random Forest*: `number of trees`, `splitting criterion`, `maximum tree depth`
     
-  - All classifiers tested using:
+  - All text classifiers tested using:
     - *Term Frequency Inverse Document Frequency (TF-IDF)*
       - *Unigrams, Bigrams & Trigrams*
     - *Ten-fold cross-validation*
