@@ -64,7 +64,7 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
     - *Ten-fold cross validation*
     - *Stratified K-fold sampling*
   - Different tests can be performed for each classifier, adjusting the values of classifier-specific parameters (lines 607-610)
-  - The micro-average Accuracy and AUC values (using ROC curves) are calculated, since the 'Agg_Reduced.csv.zip' dataset contains a class imbalance.
+  - The micro-average Accuracy and AUC values (using ROC curves) are calculated, since the *Agg_Reduced.csv.zip* dataset contains a class imbalance.
 
 **_2) Bigrams_**: 
   - Test the same text classifiers via the same techniques but on bigrams
@@ -88,7 +88,7 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
 
   - Confusion matrices, ROC curves, macro-average AUC and Accuracy values are calculated (since the *SMOTE oversampling* removes the class imbalance in the *Agg_Reduced* dataset) and misclassified tweets reviewed 
 
-  - *DBSCAN* clustering is performed on classified tweets from both the *Naives Bayes* and * linear SVC* classifiers
+  - *DBSCAN* clustering is performed on classified tweets from both the *Naives Bayes* and *linear SVC* classifiers
   - `Epsilon value` (radius) in line 1002 can be adjusted (this value is for both *Naive Bayes* and *linear SVC*)
   - `Min_density` (number of points in the specified radius) in line 1029 for the *linear SVC* and line 1280 for the *Naive Bayes*, can be adjusted
 
