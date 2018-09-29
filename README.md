@@ -1,27 +1,30 @@
 # An automated disaster detection tool written in Python as part of an MSc thesis.
 
-A text classifier is used to classify tweets into disaster-type. These classified tweets are then clustered using *Density-Based Spatial Clustering of Applications with Noise (DBSCAN)*. To select the most relevant text classifier and parameter settings, 2 stages of assessment are completed: *testing* and *evaluation*.
+A text classifier is used to classify tweets into disaster-type. These classified tweets are then clustered using *Density-Based Spatial Clustering of Applications with Noise (DBSCAN)*. 
+
+To select the most relevant text classifier and parameter values, 2 stages of assessment are completed: *testing* and *evaluation*. Both are explained below.
 
 ## Testing 
-  - 4 text classifiers are tested. In the thesis, this involved 8 different parameter settings, each parameter unique to the classifer
-    - *Naive Bayes (benchmark)*
-    - *Linear Support Vector Classifier (SVC)*
-    - *Logistic Regression*
-    - *Random Forest*
+  - 4 text classifiers are tested. In the thesis, this involved 8 different parameter values for each parameter. Each parameter unique to the classifer. Below is the name of each classifier tested and the parameter adjusted.
+    - *Naive Bayes (benchmark)*: `alpha`
+    - *Linear Support Vector Classifier (SVC)*: `cost`
+    - *Logistic Regression*: `cost`
+    - *Random Forest*: `number of trees`, `splitting criterion`, `maximum tree depth`
     
   - All classifiers tested using:
     - *Term Frequency Inverse Document Frequency (TF-IDF)*
+      - *Unigrams, Bigrams & Trigrams*
     - *Ten-fold cross-validation*
-    - *Stratified k-fold sampling*
+    - *Stratified K-fold sampling*
     - *Micro-average AUC scores (computed using ROC curves)*
     - *Micro-average Accuracy scores*
     
-  - An optimised Naive Bayes classifier and the best-performing classifier (found to the linear SVC) are then selected for *evaluation*
   
 ## Evaluation 
-  - The optimised Naive Bayes classifier and best-performing classifier are assessed further:
+  - The optimised *Naive Bayes* classifier and best-performing classifier (found to the *linear SVC*) are assessed further:
     - *Term Frequency Inverse Document Frequency (TF-IDF)*
-    - *SMOTE oversampling (training data only)*
+    - *SMOTE oversampling*
+      - *Training data only*
     - *Macro-average AUC scores*
     - *Macro-average Accuracy scores*
     - *Confusion matrices*
@@ -29,7 +32,7 @@ A text classifier is used to classify tweets into disaster-type. These classifie
     
   - *DBSCAN* algorithm is evaluated using tweets classified by both text classifiers 
 
-After *testing* and *evaluation*, the MSc thesis proposed the use of a linear SVC with a 'cost' parameter of 0.5 and a DBSCAN algorithm with an 'eps' value of 20 (20km) and 'min_samples' value of 80 (80 tweets). This means a disaster is detected if 80 tweets, classified by the linear SVC as belonging to the same disaster-type (e.g. typhoon), are clustered inside a radius of 20km, using coordinates appended to tweets.
+After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear SVC* with a `cost` parameter of 0.5 and a *DBSCAN* algorithm with an `eps` value of 20 (20km) and `min_samples` value of 80 (80 tweets). This means a disaster is detected if 80 tweets, classified by the *linear SVC* as belonging to the same disaster-type (e.g. typhoon), are clustered inside a radius of 20km, using coordinates appended to tweets.
 
 # Resources
 
@@ -52,10 +55,12 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a linear SV
 ## The ‘Testing’ folder contains 3 scripts:
 
 **_1) Unigrams_**:
-  - Test the 4 text classifiers on unigrams using:
-    - Term Frequency Inverse Document Frequency (TF-IDF)
-    - Ten-fold cross validation
-    - Stratified K-fold Smpling.
+  - Test the 4 text classifiers on using:
+    - *Term Frequency Inverse Document Frequency (TF-IDF)*
+      - *Unigrams* (found to lead to highest Accuracy and lowest misclassification rates during *testing*)
+    - *Ten-fold cross validation*
+    - *Stratified K-fold sampling*
+    
   - Different tests can be performed for each classifier, adjusting the values of classifier-specific parameters (lines 607-610)
   - The micro-average Accuracy and AUC values (using ROC curves) are calculated, since the 'Agg_Reduced.csv.zip' dataset contains a class imbalance.
 
