@@ -30,7 +30,7 @@ After pre-processing raw tweets, the most relevant text classifier and parameter
     - *Confusion matrices*
     - *Review of misclassified tweets*
     
-  - *DBSCAN* algorithm is evaluated using tweets classified by both text classifiers. 
+  - *DBSCAN* algorithm is evaluated using tweets classified by both text classifiers 
     - Performance is evaluated after adjusting `eps` and `min_samples` parameter values
     -  `eps`: radius (input is KM)
     - `min_samples`: minimum number of tweets in specified radius (`eps`) to detect a disaster
@@ -60,7 +60,7 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
 **_1) Unigrams_**:
   - Test the 4 text classifiers on using:
     - *Term Frequency Inverse Document Frequency (TF-IDF)*
-      - *Unigrams* (found to lead to highest Accuracy and lowest misclassification rates during *testing*)
+      - *Unigrams* (found to lead to the highest Accuracy and lowest misclassification values during *testing*)
     - *Ten-fold cross validation*
     - *Stratified K-fold sampling*
   - Different tests can be performed for each classifier, adjusting the values of classifier-specific parameters (lines 607-610)
@@ -68,28 +68,28 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
 
 **_2) Bigrams_**: 
   - Test the same text classifiers via the same techniques but on bigrams
-  - The code is identical, except the `ngram_range` in line 583, as part of the *TfidfVectorizer* and the subsequent use of the *TF-IDF* vector.
+  - The code is identical, except the `ngram_range` in line 583, as part of the *TfidfVectorizer* and the subsequent use of the *TF-IDF* vector
 
 **_3) Trigrams_**:
   - Test the same text classifiers via the same techniques but on trigrams
-  - The code is identical, except the `ngram_range` in line 583, as part of the *TfidfVectorizer* and the subsqeuent use of the *TF-IDF* vector.
+  - The code is identical, except the `ngram_range` in line 583, as part of the *TfidfVectorizer* and the subsqeuent use of the *TF-IDF* vector
 
 
 ## The 'Evaluation’ folder contains 1 script:
 
 **_1) Overall_Evaluation_**:
-  - The best variant of the *Naive Bayes* (benchmark) and *linear SVC* (the best performing classifier from *testing* performed for the MSc thesis) are evaluated on increasingly larger subsets
-    - Controlled by adjusting the `p` value in line 17. Unigrams is used, based on the results obtained during the thesis but can be changed by adjusting the `ngram_range` in line 588. 
+  - The best variant of the *Naive Bayes* (benchmark) and the *linear SVC* (the best performing classifier from *testing* performed for the MSc thesis) are evaluated on increasingly larger subsets
+    - Controlled by adjusting the `p` value in line 17. Unigrams are used, based on the results obtained during the thesis but can be changed by adjusting the `ngram_range` in line 588. 
 
   - *SMOTE oversampling*
     - Performed on the training dataset only, not the test dataset
-    - Prevent artifically creating an event, since the volume of tweets in a specified radius is used for DBSCAN clustering
-    - No cross-validation is performed (too computationall expensive) 
+    - Prevent artifically creating a disaster, since the volume of tweets in a specified radius is used for *DBSCAN*
+    - No cross-validation is performed (too computationally expensive) 
 
   - Confusion matrices, ROC curves, macro-average AUC and Accuracy values are calculated (since the *SMOTE oversampling* removes the class imbalance in the *'Agg_Reduced* dataset) and misclassified tweets reviewed 
 
-  - *DBSCAN* clustering is performed on classified tweets from both the *Naives Bayes* and *SVC* classifiers
-  - `Epsilon value` (radius) in line 1002 can be adjusted (this value is for both *Naive Bayes* and *SVC*)
+  - *DBSCAN* clustering is performed on classified tweets from both the *Naives Bayes* and * linear SVC* classifiers
+  - `Epsilon value` (radius) in line 1002 can be adjusted (this value is for both *Naive Bayes* and *linear SVC*)
   - `Min_density` (number of points in the specified radius) in line 1029 for the *linear SVC* and line 1280 for the *Naive Bayes*, can be adjusted
 
    - A colour-coded map of the world is generated for each classifier, overlaying the location and the type of disaster detected
