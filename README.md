@@ -5,7 +5,7 @@ A text classifier is used to classify tweets into disaster-type. These classifie
 To select the most relevant text classifier and parameter values, 2 stages of assessment are completed: *testing* and *evaluation*. Both are explained below.
 
 ## Testing 
-  - 4 text classifiers are tested. In the thesis, this involved 8 different parameter values for each parameter. Each parameter unique to the classifer. Below is the name of each classifier tested and the parameter adjusted.
+  - 4 text classifiers are tested. In the thesis, this involved 8 different values for each parameter. Each parameter ia unique to the classifer. Below is the name of each classifier tested and the parameter adjusted.
     - *Naive Bayes (benchmark)*: `alpha`
     - *Linear Support Vector Classifier (SVC)*: `cost`
     - *Logistic Regression*: `cost`
@@ -75,10 +75,11 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
 ## The 'Evaluation’ folder contains 1 script:
 
 **_1) Overall_Evaluation_**:
-  - The best variant of the Naive Bayes (benchmark) and linear Support Vector Classifier (the best performing classifier from *testing* performed for the MSc thesis) are evaluated on increasingly larger subsets
+  - The best variant of the *Naive Bayes* (benchmark) and *linear Support Vector Classifier* (the best performing classifier from *testing* performed for the MSc thesis) are evaluated on increasingly larger subsets
     - Controlled by adjusting the `p` value in line 17. Unigrams is used, based on the results obtained during the thesis but can be changed by adjusting the `ngram_range` in line 588. 
 
-  - *SMOTE oversampling* is performed on the training dataset only, not the test dataset
+  - *SMOTE oversampling*
+    - Performed on the training dataset only, not the test dataset
     - Prevent artifically creating an event, since the volume of tweets in a specified radius is used for DBSCAN clustering
     - No cross-validation is performed. 
 
@@ -89,6 +90,6 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
   - `Epsilon value` (radius) in line 1002 can be adjusted (this value is for both *Naive Bayes* and *SVC*)
   - `Min_density` (number of points in the specified radius) in line 1029 for the *linear SVC* and line 1280 for the *Naive Bayes*, can be adjusted
 
-   - A colour-coded map of the world is generated for each classifier that overlays the location and event-type of each detected disaster
-   - A .csv export is produced, which contains the location, event-type and coordinates of each disaster
+   - A colour-coded map of the world is generated for each classifier, overlaying the location and the type of disaster detected
+   - A .csv export is produced, which contains the location, disaster-type and coordinates of each disaster detected
 
