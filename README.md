@@ -75,7 +75,7 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
 ## The 'Evaluation’ folder contains 1 script:
 
 **_1) Overall_Evaluation_**:
-  - The best variant of the *Naive Bayes* (benchmark) and *linear Support Vector Classifier* (the best performing classifier from *testing* performed for the MSc thesis) are evaluated on increasingly larger subsets
+  - The best variant of the *Naive Bayes* (benchmark) and *linear SVC* (the best performing classifier from *testing* performed for the MSc thesis) are evaluated on increasingly larger subsets
     - Controlled by adjusting the `p` value in line 17. Unigrams is used, based on the results obtained during the thesis but can be changed by adjusting the `ngram_range` in line 588. 
 
   - *SMOTE oversampling*
@@ -83,10 +83,9 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
     - Prevent artifically creating an event, since the volume of tweets in a specified radius is used for DBSCAN clustering
     - No cross-validation is performed. 
 
-  - Confusion matrices are created
-  - ROC curves, macro-average AUC values are calculated, alongside macro-average Accuracy values (since the SMOTE oversampling removes the class imbalance) and misclassified tweets reviewed. 
+  - Confusion matrices, ROC curves, macro-average AUC and Accuracy values are calculated (since the *SMOTE oversampling* removes the class imbalance in the *'Agg_Reduced* dataset) and misclassified tweets reviewed 
 
-  - DBSCAN clustering is performed on classified tweets from both the *Naives Bayes* and *SVC* classifiers
+  - *DBSCAN* clustering is performed on classified tweets from both the *Naives Bayes* and *SVC* classifiers
   - `Epsilon value` (radius) in line 1002 can be adjusted (this value is for both *Naive Bayes* and *SVC*)
   - `Min_density` (number of points in the specified radius) in line 1029 for the *linear SVC* and line 1280 for the *Naive Bayes*, can be adjusted
 
