@@ -2,7 +2,7 @@
 
 A text classifier is used to classify tweets into disaster-type. These classified tweets are then clustered using *Density-Based Spatial Clustering of Applications with Noise (DBSCAN)*. A disaster is detected if the number of tweets belonging to a single disaster-type exceeds a threshold within a specified radius. In the thesis, the values proposed are 80 tweets and 20km, respectively.
 
-Process completed in thesis:
+Process completed in the MSc thesis:
 
 1) **Pre-process raw tweets**
 2) **Testing**
