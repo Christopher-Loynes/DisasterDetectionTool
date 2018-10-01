@@ -13,13 +13,7 @@ Process completed in thesis:
     - DBSCAN algorithm evaluated on tweets classified by both of the text classifiers  
 5) Identificaton of best text classifier and parameter values, alongside the best parameter values for the DBSCAN algorithm
 
-
-
-
-    
-  
-
-
+## Example of Colour-Coded Colour-Coded Export
 
 ![nbclusterplot100](https://user-images.githubusercontent.com/34406492/46284225-eb539d00-c56e-11e8-9689-50f34a9a26d8.png)
 
