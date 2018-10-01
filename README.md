@@ -4,10 +4,10 @@ A text classifier is used to classify tweets into disaster-type. These classifie
 
 Process completed in thesis:
 
-1) **Pre-process raw tweets
-2) **'Testing'
+1) **Pre-process raw tweets**
+2) **'Testing'**
     - 4 text classifiers tested
-3) **'Evaluation'
+3) **'Evaluation'**
     - Best version of the benchmark and best performing text classifier evaluated further
     - DBSCAN algorithm evaluated on tweets classified by both of the text classifiers 
     - Identificaton of best text classifier and parameter values
@@ -20,10 +20,10 @@ Process completed in thesis:
 
 ## Resources
 
-- [1) 'Data' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Data'-Folder)
-- [2) 'Pre-processing' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Preprocessing'-Folder)
-- [3) 'Testing' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Testing'-Folder) 
-- [4) 'Evaluation' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Evaluation'-Folder)
+- [1) Data](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Data'-Folder)
+- [2) Pre-processing](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Preprocessing'-Folder)
+- [3) Testing](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Testing'-Folder) 
+- [4) Evaluation](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Evaluation'-Folder)
 
 
 
