@@ -4,13 +4,14 @@ A text classifier is used to classify tweets into disaster-type. These classifie
 
 Process completed in thesis:
 
-1) Pre-process raw tweets
-2) 'Testing'
+1) **Pre-process raw tweets
+2) **'Testing'
     - 4 text classifiers tested
-3) 'Evaluation'
+3) **'Evaluation'
     - Best version of the benchmark and best performing text classifier evaluated further
-    - DBSCAN algorithm evaluated on tweets classified by both of the text classifiers  
-4) Identificaton of best text classifier and parameter values, alongside the best parameter values for the DBSCAN algorithm
+    - DBSCAN algorithm evaluated on tweets classified by both of the text classifiers 
+    - Identificaton of best text classifier and parameter values
+    - Identification of best parameter values for the DBSCAN algorithm
 
 ## Example of Colour-Coded Colour-Coded Export
 
