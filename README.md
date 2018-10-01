@@ -5,10 +5,14 @@ A text classifier is used to classify tweets into disaster-type. These classifie
 Process completed in thesis:
 
 1) **Pre-process raw tweets**
-2) **'Testing'**
-    - 4 text classifiers tested
-3) **'Evaluation'**
-    - Best version of the benchmark and best performing text classifier evaluated further
+2) **Testing**
+    - 4 text classifiers tested:
+        - Logistic Regression
+        - Naive Bayes (benchmark)
+        - Random Forest
+        - Support Vector Classifier
+3) **Evaluation**
+    - Best version of the benchmark (Naive Bayes) and best performing text classifier evaluated further
     - DBSCAN algorithm evaluated on tweets classified by both of the text classifiers 
     - Identificaton of best text classifier and parameter values
     - Identification of best parameter values for the DBSCAN algorithm
