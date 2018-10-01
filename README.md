@@ -2,22 +2,16 @@
 
 A text classifier is used to classify tweets into disaster-type. These classified tweets are then clustered using *Density-Based Spatial Clustering of Applications with Noise (DBSCAN)*. A disaster is detected if the number of tweets belonging to a single disaster-type exceeds a threshold within a specified radius. In the thesis, the values proposed are 80 tweets and 20km, respectively.
 
-After pre-processing raw tweets, the most relevant text classifier and parameter values are selected using 2 stages of assessment: *testing* and *evaluation*. Both are explained below.
+Process completed in thesis:
 
-## Testing 
-  - 4 text classifiers are tested. In the thesis, this involved 8 different values for each parameter. Each parameter is unique to the classifier. Below is the name of each classifier tested and the parameter adjusted.
-    - *Naive Bayes (benchmark)*: `alpha`
-    - *Linear Support Vector Classifier (SVC)*: `cost`
-    - *Logistic Regression*: `cost`
-    - *Random Forest*: `number of trees`, `maximum tree depth`, `splitting criterion`
-    
-  - All text classifiers tested using:
-    - *Term Frequency Inverse Document Frequency (TF-IDF)*
-      - *Unigrams, Bigrams & Trigrams*
-    - *Ten-fold cross-validation*
-    - *Stratified K-fold sampling*
-    - *Micro-average AUC scores (computed using ROC curves)*
-    - *Micro-average Accuracy scores*
+- [1) 'Data' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Data'-Folder)
+- [2) 'Pre-processing' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Preprocessing'-Folder)
+- [3) 'Testing' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Testing'-Folder) 
+- [4) 'Evaluation' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Evaluation'-Folder)
+
+
+
+
     
   
 ## Evaluation 
@@ -43,7 +37,7 @@ After *testing* and *evaluation*, the MSc thesis proposed the use of a *linear S
 
 ## Resources
 
-- [1) 'Data' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Data'-Folder)
-- [2) 'Pre-processing' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Preprocessing'-Folder)
-- [3) 'Testing' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Testing'-Folder)
-- [4) 'Evaluation' folder](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Evaluation'-Folder)
+
+
+
+
