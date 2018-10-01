@@ -21,7 +21,7 @@ Process completed in the MSc thesis:
 
 All disasters detected are exported in 2 formats.
 
-1) The geographic location of events are overlayed on a map. Each colour indicates the disaster-type. 
+1) The geographic location of events are overlayed on a map. Each colour indicates a different disaster-type. 
     - Example below is based on tweets classified using a Naive Bayes text classifier
 
 ![nbclusterplot100](https://user-images.githubusercontent.com/34406492/46284225-eb539d00-c56e-11e8-9689-50f34a9a26d8.png)
