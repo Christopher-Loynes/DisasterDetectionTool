@@ -1,8 +1,10 @@
 # An automated disaster detection tool written in Python as part of an MSc thesis
 
+# Summary
+
 A text classifier is used to classify tweets into disaster-types. These classified tweets are then clustered using *Density-Based Spatial Clustering of Applications with Noise (DBSCAN)*. A disaster is detected if the number of tweets belonging to a single disaster-type exceeds a threshold within a specified radius. In the thesis, the initial values proposed are 80 tweets and 20km, respectively. These should be adjusted based on the volume and velocity of tweets being processed.
 
-Process completed in the MSc thesis:
+# Process
 
 1) **Pre-process raw tweets**
 2) **Testing**
@@ -19,17 +21,17 @@ Process completed in the MSc thesis:
 
 ## Exports
 
-All disasters detected are exported in 2 formats.
+**All disasters detected are exported in 2 formats.**
 
-1) The geographic location of events are overlayed on a map. Each colour indicates a different disaster-type. 
+**1) The geographic location of events are overlayed on a map. Each colour indicates a different disaster-type.**
     - Example below is based on tweets classified using a Naive Bayes text classifier
 
 ![nbclusterplot100](https://user-images.githubusercontent.com/34406492/46284225-eb539d00-c56e-11e8-9689-50f34a9a26d8.png)
 
-2) .CSV export that contains:
-    - Disaster type
-    - Name of the geographic location
-    - Coordinates of the geographic location
+**2) .CSV export that contains:**
+     - Disaster type
+     - Name of the geographic location
+     - Coordinates of the geographic location
 
 ## Resources
 
