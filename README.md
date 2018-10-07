@@ -6,14 +6,29 @@ A text classifier is used to classify tweets into disaster-types. These classifi
 
 # Process
 
-1) **Pre-process raw tweets**
-2) **Testing**
+1) [**Pre-processing**](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/Preprocessing)
+    - Aggregate raw tweets
+    - Text normalisation
+        - Remove "RT", which denotes 'retweet'
+        - Remove hyperlinks
+        - Remove hash signs (#) from hashtags, so only the characters/word remains
+        - Tokenise tweets
+        - Remove excess characters repeated 3 or more times
+        - Remove username handles
+        - Remove any 'pic.twitter' URLs
+        - Remove any URL
+        - Expand contractions into full words
+        - Remove stop words from tweet
+        - Remove punctuation
+        - Remove numerical characters
+        - Remove any tweets remaining that contain less than 4 words
+2) [**Testing**](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/Testing)
     - 4 text classifiers tested:
         - Logistic Regression
         - Naive Bayes (benchmark)
         - Random Forest
         - Support Vector Classifier
-3) **Evaluation**
+3) [**Evaluation**](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/Evaluation)
     - Best version of the benchmark and the best performing text classifier evaluated further
     - DBSCAN algorithm evaluated on tweets classified by both of the text classifiers 
     - Identificaton of best text classifier and parameter values
