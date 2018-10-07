@@ -35,10 +35,10 @@ A text classifier is used to classify tweets into disaster-types. These classifi
 
 ## Resources
 
-- [1) Data](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Data'-Folder)
-- [2) Pre-processing](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Preprocessing'-Folder)
-- [3) Testing](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Testing'-Folder) 
-- [4) Evaluation](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/'Evaluation'-Folder)
+- [1) Data](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/Data)
+- [2) Pre-processing](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/Preprocessing)
+- [3) Testing](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/Testing) 
+- [4) Evaluation](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/Evaluation)
 
 
 
