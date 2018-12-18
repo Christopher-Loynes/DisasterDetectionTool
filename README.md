@@ -2,6 +2,8 @@
 
 # Summary
 
+Developed as part of my MSc dissertation at the University of Edinburgh (2017/18), titled "The Detection and Location Estimation of Disasters Using Twitter and the Identification of Non-Governmental Organisations (NGOs) Using Crowdsourcing".
+
 A text classifier is used to classify tweets into disaster-types. These classified tweets are then clustered using *Density-Based Spatial Clustering of Applications with Noise (DBSCAN)*. A disaster is detected if the number of tweets belonging to a single disaster-type exceeds a threshold within a specified radius. In the thesis, the initial values proposed are 80 tweets and 20km, respectively. These should be adjusted based on the volume and velocity of tweets being processed.
 
 # Process
