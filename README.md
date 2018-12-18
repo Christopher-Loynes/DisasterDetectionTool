@@ -13,7 +13,7 @@ A text classifier is used to classify tweets into disaster-types. These classifi
     - Text normalisation
         - Remove "RT", which denotes 'retweet'
         - Remove hyperlinks
-        - Remove hash signs (#) from hashtags, so only the characters/word remains
+        - Remove hash signs (#) from hashtags, so only the characters/words remain
         - Tokenise tweets
         - Remove excess characters repeated 3 or more times
         - Remove username handles
