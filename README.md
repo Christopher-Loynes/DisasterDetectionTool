@@ -1,10 +1,12 @@
-# An automated disaster detection tool written in Python as part of an MSc thesis
+# An automated disaster detection tool written in Python and published in the Annals of Operations Research
 
 # Summary
 
-Developed as part of my MSc dissertation at the University of Edinburgh (2017/18), titled "The Detection and Location Estimation of Disasters Using Twitter and the Identification of Non-Governmental Organisations (NGOs) Using Crowdsourcing".
+Developed as part of my MSc dissertation at the University of Edinburgh (2017/18) and published in the Annals of Operations Rearch:
 
-A text classifier is used to classify tweets into disaster-types. These classified tweets are then clustered using *Density-Based Spatial Clustering of Applications with Noise (DBSCAN)*. A disaster is detected if the number of tweets belonging to a single disaster-type exceeds a threshold within a specified radius. In the thesis, the initial values proposed are 80 tweets and 20km, respectively. These should be adjusted based on the volume and velocity of tweets being processed.
+*Loynes, C., Ouenniche, J. and De Smedt, J., 2020. The detection and location estimation of disasters using Twitter and the identification of Non-Governmental Organisations using crowdsourcing. Annals of Operations Research, pp.1-33.*
+
+A text classifier is used to classify tweets into disaster-types. These classified tweets are then clustered using *Density-Based Spatial Clustering of Applications with Noise (DBSCAN)*. A disaster is detected if the number of tweets belonging to a single disaster-type exceeds a threshold within a specified radius. The initial values proposed are 80 tweets and 20km, respectively. These should be adjusted based on the volume and velocity of tweets being processed.
 
 # Process
 
@@ -24,12 +26,14 @@ A text classifier is used to classify tweets into disaster-types. These classifi
         - Remove punctuation
         - Remove numerical characters
         - Remove any tweets remaining that contain less than 4 words
+        
 2) [**Testing**](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/Testing)
     - 4 text classifiers tested:
         - Logistic Regression
         - Naive Bayes (benchmark)
         - Random Forest
         - Support Vector Classifier
+        
 3) [**Evaluation**](https://github.com/Christopher-Loynes/DisasterDetectionTool/wiki/Evaluation)
     - Best version of the benchmark and the best performing text classifier evaluated further
     - DBSCAN algorithm evaluated on tweets classified by both of the text classifiers 
